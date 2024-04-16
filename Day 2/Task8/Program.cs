@@ -17,6 +17,8 @@ namespace Task8
                 double y = Math.Tan(x);
                 Console.WriteLine($"x = {x:F2}, F(x) = {y:F4}");
             }
+
+            Console.ReadLine();
         }
     }
 }

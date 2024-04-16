@@ -14,6 +14,8 @@ namespace Task9
 
             int count = CountDigitOccurrences(n, k);
             Console.WriteLine($"Цифра {k} встречается в числе {n} {count} раз(а).");
+
+            Console.ReadLine();
         }
 
         static int CountDigitOccurrences(int number, int digit)

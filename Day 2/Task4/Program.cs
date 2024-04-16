@@ -13,16 +13,19 @@ namespace Task4
             int B = int.Parse(Console.ReadLine());
 
             Console.Write("Введите цифру Х или У: ");
-            char targetDigit = char.ToLower(Console.ReadKey().KeyChar);
+            int targetDigit = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            while (A <= B)
+            if (targetDigit <= 9 && targetDigit >= 0)
             {
-                if (A % 10 == targetDigit)
+                while (A <= B)
                 {
-                    Console.WriteLine(A);
+                    if (A % 10 == targetDigit)
+                    {
+                        Console.WriteLine(A);
+                    }
+                    A++;
                 }
-                A++;
             }
 
             Console.ReadLine();

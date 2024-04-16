@@ -26,7 +26,7 @@ namespace Task7
                 }
             }
 
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }

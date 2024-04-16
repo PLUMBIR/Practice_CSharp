@@ -13,6 +13,8 @@ namespace Task1
             double y = CalculateFunction(x);
 
             Console.WriteLine($"Значение функции y при x = {x} равно {y}");
+
+            Console.ReadLine();
         }
 
         static double CalculateFunction(double x)

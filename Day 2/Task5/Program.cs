@@ -12,15 +12,18 @@ namespace Task5
             Console.Write("Введите конечное значение В: ");
             int B = int.Parse(Console.ReadLine());
 
-            Console.Write("Введите цифру Х или У: ");
-            char targetDigit = char.ToLower(Console.ReadKey().KeyChar);
+            Console.Write("Введите цифру Х: ");
+            int targetDigit = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            for (int i = A; i <= B; i++)
+            if(targetDigit <= 9 && targetDigit >= 0)
             {
-                if (i % 10 == targetDigit)
+                for (int i = A; i <= B; i++)
                 {
-                    Console.WriteLine(i);
+                    if (i % 10 == targetDigit)
+                    {
+                        Console.WriteLine(i);
+                    }
                 }
             }
 
