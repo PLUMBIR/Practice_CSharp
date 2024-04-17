@@ -4,19 +4,33 @@ namespace Task1
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Введите первое вещественное число: ");
-            double number1 = double.Parse(Console.ReadLine());
+            Console.Write("Введите значение x: ");
 
-            Console.Write("Введите второе вещественное число: ");
-            double number2 = double.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
 
-            double product = number1 * number2;
+            double y = CalculateFunction(x);
 
-            Console.WriteLine($"Произведение чисел: {product:F1}");
+            Console.WriteLine($"Значение функции y при x = {x} равно {y}");
 
             Console.ReadLine();
+        }
+
+        static double CalculateFunction(double x)
+        {
+            if (x >= 1 && x <= 3)
+            {
+                return 2 * Math.Pow(x, 2) - 3 * Math.Exp(Math.Sin(x));
+            }
+            else if (x > 3)
+            {
+                return 3 * Math.Tan(x);
+            }
+            else
+            {
+                throw new ArgumentException("Функция не определена для x < 1.");
+            }
         }
     }
 }

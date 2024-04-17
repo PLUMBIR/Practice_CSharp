@@ -4,18 +4,29 @@ namespace Task6
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.Write("Введите двузначное число: ");
-            int number = int.Parse(Console.ReadLine());
+            Console.Write("Введите начальное значение А: ");
+            int A = int.Parse(Console.ReadLine());
 
-            int firstDigit = number / 10;
+            Console.Write("Введите конечное значение В: ");
+            int B = int.Parse(Console.ReadLine());
 
-            int secondDigit = number % 10;
+            Console.Write("Введите цифру Х или У: ");
+            int targetDigit = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
-            int sum = firstDigit + secondDigit;
-
-            Console.WriteLine($"Сумма цифр числа {number} равна {sum}");
+            if (targetDigit <= 9 && targetDigit >= 0)
+            {
+                do
+                {
+                    if (A % 10 == targetDigit)
+                    {
+                        Console.WriteLine(A);
+                    }
+                    A++;
+                } while (A <= B);
+            }
 
             Console.ReadLine();
         }

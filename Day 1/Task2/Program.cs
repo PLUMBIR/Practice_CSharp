@@ -6,16 +6,25 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите трехзначное число: ");
-            int ABC = int.Parse(Console.ReadLine());
+            Console.Write("Введите целое число M: ");
+            int M = int.Parse(Console.ReadLine());
 
-            int B = (ABC % 100) / 10;
-            int C = ABC % 10;
-            int A = ABC / 100;
+            Console.Write("Введите целое число N: ");
+            int N = int.Parse(Console.ReadLine());
 
-            int BCA = B * 100 + C * 10 + A;
+            int quotient = M / N;
+            int remainder = M % N;
 
-            Console.WriteLine($"Полученное число: {BCA}");
+            if (remainder == 0)
+            {
+                Console.WriteLine($"Частное от деления: {quotient}");
+            }
+            else
+            {
+                Console.WriteLine($"{M} на {N} нацело не делится.");
+            }
+
+            Console.ReadLine();
         }
     }
 }

@@ -6,35 +6,15 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите признак транспортного средства (a - автомобиль, в - велосипед, м - мотоцикл, с - самолет, п - поезд): ");
-            char transportType = char.ToLower(Console.ReadKey().KeyChar);
-            Console.WriteLine();
+            var myPortalAddress = new PostalAddress("BLK", "Grodno", "230009");
 
-            int maxSpeed = 0;
+            myPortalAddress.DisplayAddress();
 
-            switch (transportType)
-            {
-                case 'a':
-                    maxSpeed = 200;
-                    break;
-                case 'в':
-                    maxSpeed = 30;
-                    break;
-                case 'м':
-                    maxSpeed = 150; 
-                    break;
-                case 'с':
-                    maxSpeed = 900; 
-                    break;
-                case 'п':
-                    maxSpeed = 300; 
-                    break;
-                default:
-                    Console.WriteLine("Неверный признак транспортного средства.");
-                    return;
-            }
+            myPortalAddress.ChangeCity("Minsk");
+            myPortalAddress.ChangeStreet("Prospect");
+            myPortalAddress.ChangeZipCode("240005");
 
-            Console.WriteLine($"Максимальная скорость транспортного средства: {maxSpeed} км/ч");
+            myPortalAddress.DisplayAddress();
 
             Console.ReadLine();
         }

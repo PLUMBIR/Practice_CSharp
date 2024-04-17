@@ -6,16 +6,25 @@ namespace Task7
     {
         static void Main(string[] args)
         {
-            int a = int.Parse(Console.ReadLine());
+            Console.Write("Введите A: ");
+            double a = double.Parse(Console.ReadLine());
 
-            int b = int.Parse(Console.ReadLine());
+            Console.Write("Введите N: ");
+            int n = int.Parse(Console.ReadLine());
 
-            var z1 = (Math.Sin(a) + Math.Cos(2 * b - a)) / Math.Cos(a) - Math.Sin(2 * b - a);
-
-            var z2 = 1 + Math.Sin(2 * b) / Math.Cos(2 * b);
-
-            Console.WriteLine($"z1 = {z1}");
-            Console.WriteLine($"z2 = {z2}");
+            if ((a < -5 || a > 5) || (n < 1 || n > 10))
+            {
+                Console.WriteLine("Неверный ввод.");
+            }
+            else
+            {
+                double result = 1;
+                for (int i = 1; i <= n; i++)
+                {
+                    result *= a;
+                    Console.WriteLine(result);
+                }
+            }
 
             Console.ReadLine();
         }
