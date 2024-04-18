@@ -48,6 +48,5 @@ namespace Task3
                 Console.WriteLine("Нет данных.");
             }
         }
-
     }
 }
