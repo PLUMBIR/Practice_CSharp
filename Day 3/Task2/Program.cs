@@ -29,7 +29,5 @@ namespace Task2
 
             S = width * height;
         }
-
-
     }
 }
